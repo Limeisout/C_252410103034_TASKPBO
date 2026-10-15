@@ -171,31 +171,29 @@
             Console.WriteLine("\n----Demonstrasi Polymorfisme----");
             Karyawan[] daftarPolimorfik = { karyawanTetap, karyawankontrak, rolemanager, rolestaff, rolemagang, rolefreelancer };
 
-            foreach (Karyawan karyawan in daftarPolimorfik)
+            foreach (Karyawan staffkaryawan in daftarPolimorfik)
             {
-                karyawan.Kerja();
+                staffkaryawan.Kerja();
             }
 
             Console.WriteLine("\n----Memanggil Method Khusus----");
-            
+            Console.WriteLine("\nsoal 1 & 2");
             rolemanager.Kerja();
             rolefreelancer.Kerja();
 
             rolemanager.Memimpin();
 
-            //=====================================================
-            // soal 3
+            Console.WriteLine("\nsoal 3");
             rolemanager.InfoKaryawan();
             Console.WriteLine($"Tunjangan: {rolemanager.Tunjangan}");
             rolemanager.HitungGajiTotal();
 
-            //=====================================================
-            // soal 4
+            Console.WriteLine("\nsoal 4");
             rolemagang.Belajar();
 
-            //=====================================================
-            // soal 5
-            
+            Console.WriteLine("\nsoal 5");
+            Karyawan karyawan = new Staff("Hendra", 4500000, 600000);
+            karyawan.Kerja();
         }
     }
 }
